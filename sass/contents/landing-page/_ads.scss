@@ -1,0 +1,78 @@
+/*********************************
+	FIRST ADS
+*********************************/
+
+.commerce {
+	text-align: center;
+	margin-top:140px;
+	.commerce1 {
+		width: 100%;
+		
+		@include tablet {
+			display: none;
+		}
+		@include phone {
+			display: none;
+		}
+	}
+	.commerce1-720p {
+		width: 100%;
+		display: none;
+		@include tablet {
+			display: block;
+		}
+		@include phone {
+			display: none;
+		}
+	}
+	.commerce1-480p {
+		width: 100%;
+		display: none;
+		@include tablet {
+			display: none;
+		}
+		@include phone {
+			display: block;
+		}
+	}
+
+}
+
+/*********************************
+	SECOND ADS
+*********************************/
+
+.adTwo {
+	text-align: center;
+	.add2 {
+		width: 100%;
+
+		@include tablet {
+			display: none;
+		}
+		@include phone {
+			display: none;
+		}
+	}
+	.add2-720p {
+		width: 100%;
+		display: none;
+		@include tablet {
+			display: block;
+		}
+		@include phone {
+			display: none;
+		}
+	}
+	.add2-480p {
+		width: 100%;
+		display: none;
+		@include tablet {
+			display: none;
+		}
+		@include phone {
+			display: block;
+		}
+	}
+
+}

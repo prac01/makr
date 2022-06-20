@@ -1,0 +1,146 @@
+/*
+Theme Name: Makr
+
+Author: Raygie Mark Tajora
+
+Description: Woocommerce Website Training
+Requires at least: 4.9.6
+Requires PHP: 5.2.4
+Version: 1.7
+
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Variables
+# Header
+# Contents
+	## Landing-Page
+		### Grid-Billboard
+		### Ads
+		### Newest-Product
+		### Best Seller
+		### News & Events 
+	## About
+	## Products
+		### Woocommerce Style
+	## News
+	## Contact-Us
+# Footer
+	
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+>>> GUIDES ABOUT IMAGES & COLORS
+----------------------------------------------------------------
+
+price font-color: #ff0000;
+price font-color2:#2a6789;
+billboard frame1: W=753px H=487px;
+billboard frame2: W=425px H=487px;
+social media color: #c8c8c8;
+
+NOTE: IN THIS 3 COLUMN NAVIGATION WITH DIFFERENT DISTANCES BETWEEN THEM, YOU NEED TO COMBINE GRID AND FLEXBOX:
+
+1. GRID THE OVERALL DIV THAT HOLDS ALL 3 COLUMNS
+2. TO ADJUST THE CENTER ITEM TO THE A DIFFERENT POSITION, YOU NEED TO WRAP THE OTHER 2 DIVS(CENTER AND RIGHT(OR LEFT)) THEN USED FLEX
+
+
+--------------------------------------------------------------*/
+/* Variables */
+@import "sass/variables/variables";
+
+/* Mixin */
+@import "sass/mixin/mixin";
+
+/* Normalize */
+@import "sass/normalize";
+
+/* Header */
+@import "sass/header/header";
+
+/* Account */
+@import "sass/account/account";
+
+/* Cart */
+@import "sass/cart/cart";
+
+/* Cart */
+@import "sass/checkout/checkout";
+
+/* Contents */
+@import "sass/contents/contents";
+
+/* Footer */
+@import "sass/footer/footer";
+
+
+/*************************************
+
+dark mode css/js ang problem dito ay kapag na upload na sya sa github nag pi-flicker pa rin yung white background nya. so inakala ko na pag nilagyn ko ng preloader ay mawawala yun. yun pala kaya sya nagpiflicker pa rin ay dahil sa transition: all 0.3s ease; doon sa * {}. 
+
+ang solution: alisin yung transition: all 0.3s ease; doon sa * {}. at ilagay na lang ito sa header or main div na may laman na maraming div.
+
+Task:
+
+
+1. product details
+
+description/review tab
+
+
+once na matapos na yung product detail page:
+
+a. huwag munang gawan ng individual html pages lahat ng items/products. titingnan muna natin kung pwede yung nakita kung tutorial about javascript add product and add to cart method. na para bang ginawa nyang dynamic page yung html? kung posible yun, mas pagtutuunan ko muna yun ng pansin at gagawin ko na lang optional yung woocommerce.
+
+b. so instead gagawan ko na lang ng individual pages yung mga following: 
+	- about page
+	- contact page
+	- news page
+	- news details
+
+
+
+
+
+REMINDER!
+
+TO HOVER CHILD ELEMENT WHEN HOVERING FIRST THE PARENT
+
+No need to use the JavaScript or jquery, CSS is enough:
+
+.child{ display:none; }
+.parent:hover .child{ display:block; }
+
+
+
+postpone task: 
+1. adjust the width autocomplete of search suggestion [it is temprary off today]
+2. multi-toogle condition between hidden nav and search.
+example: if i click search btn, then i click nav-btn then the search form will hide;
+3. gagamit ako ng @use method instead na @import ng sass. gusto kung makita kung paano magkaroon ng parehong classname pero magkaiba ng design sa bawat page.
+
+------------------------------------------
+
+i just realized that i'm technically dead the moment i graduated in college. that was 10 years ago. i was slowly fading away off this world that i didn't notice it. until i finally made a conclusion that i'm just an out of place person.
+
+nothing good happens anymore. i am currently on a race against death. 
+
+
+
+
+**************************************/
+
+/*
+proper increment decrement of quantity
+
+JavaScript Increment & Decrement For Multiple Input Fields
+https://www.youtube.com/watch?v=2purijiQrf4
+
+update the price or numbers
+https://www.youtube.com/watch?v=JxfXJ_DzM-s
+
+*/

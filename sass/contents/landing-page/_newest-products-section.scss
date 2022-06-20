@@ -1,0 +1,151 @@
+.landingProducts  {
+	margin-top: 60px;
+	margin-bottom: 60px;
+
+	.newest_section {
+		overflow: hidden;
+
+		.landing_products {
+			/*display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+			gap: 10px;*/
+			margin-top: 60px;
+
+			@include tablet {
+				/*grid-template-columns: repeat(2, 1fr);*/
+			}
+
+			.landing_products_list:hover {
+				
+				background-color: var(--product-hover);
+				border: 1px solid var(--products-border);
+			}
+			.landing_products_list:hover .price_section {
+				top:0px;
+				left: 0px;
+			}
+
+			.landing_products_list {
+				background-color: var(--products-bg);
+				width: 100%;
+				height: 100%;
+				padding: 40px 10px 40px 10px;
+				border: 1px solid var(--products-bg);
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+
+				
+
+				.price_section {
+					position: absolute;
+					top: -106px;
+					left:-106px;
+					z-index: 90;
+					width: 106px;
+					height: 100px;
+					clip-path: polygon(0 0, 0 100%, 100% 0);
+					color: #fff;
+					background-color: var(--landing-cart);
+					transition: all 0.5s ease;
+					
+					font-size: 20px;
+					a {
+						color: var(--landing-cart-icon);
+						display: block; 
+						padding: 20px 20px;
+					}
+				}
+				/* DUAL HOVER METHOD */
+				.img_frame:hover img {
+					transform: scale(1.1);
+				}
+				.img_frame {
+					height: 207px;
+					width: auto;
+					display: grid;
+					grid-template-columns: 1fr;
+					justify-content: center;
+					align-items: center;
+					overflow: hidden;
+
+
+					img {
+						transition: all 0.5s;
+						display: block;
+						max-width: 126px;
+						max-height: 200px;
+
+						@include tablet-lg {
+							max-width:150px;
+							max-height: 180px;
+						}
+						@include phone-medium {
+							max-width:120px;
+							max-height: 170px;
+						}
+						@include phone {
+							max-height: 150px;
+						}
+						@include phone-sm {
+							max-height: 130px;
+						}
+						@include phone-xsm {
+							max-height: 150px;
+						}
+					}
+
+					
+				}
+
+				/* DUAL HOVER METHOD */
+				.img_wide:hover img {
+					transform: scale(1.1);
+				}
+				
+				/* FOR WIDER IMAGE BUT SHORT HEIGHT */
+
+				.img_wide {
+					height: 207px;
+					width: 100%;
+					display: grid;
+					grid-template-columns: 1fr;
+					justify-content: center;
+					align-items: center;
+					overflow: hidden;
+
+
+					img {
+						width: 100% !important;
+						transition: all 0.5s;
+						max-width: 200px;
+						max-height: 200px;
+
+						@include tablet {
+							max-width:250px;
+						}
+						@include phone-sm {
+							max-width: 119px;
+						}
+					}
+				}
+
+				
+
+				.product_title {
+					color: var(--title-products-new);
+					font-size: 18px;
+					font-weight: 600;
+					margin-top: 30px;
+					margin-bottom: 8px;
+				}
+				.product_price_new {
+					color: var(--price-newest);
+				}
+			}
+		}
+	}
+}

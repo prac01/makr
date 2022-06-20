@@ -1,0 +1,18 @@
+#scrollTop{
+    width:40px; 
+    height: 47px; 
+    background-color: var(--color-scrollbar); 
+    opacity: 0.99; 
+    position: fixed; 
+    z-index: 10;
+    right: 1%; 
+    bottom:100px; 
+    cursor: pointer; 
+    border:none; 
+    display: none;
+    font-size: 20px;
+    color:var(--color-scrollArrow); 
+    outline: 0px;
+    display: none;
+}
+#scrollTop:hover {background-color: var(--color-scrollbarHover);}

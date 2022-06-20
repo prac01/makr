@@ -1,0 +1,204 @@
+.account-billboard {
+	background-color: var(--color-primary);
+	position: relative;
+	background-image: url(img/account.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-top:120px;
+	height: 200px;
+	width: 100%;
+	background-color: #ebebeb;
+	z-index: 1;
+
+	@include tablet-m {
+		margin-top:72px;
+		height: 160px;
+		background-position: center center;
+	}
+
+	@include phone {
+		height: 120px;
+	}
+	
+	.account-header {
+		height: 200px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		@include tablet-m {
+			height: 160px;
+		}
+
+		@include phone {
+			height: 120px;
+		}
+
+		.account-title {
+			z-index: 50;
+			color:#333;
+			font-size: 40px;
+			text-transform: capitalize;
+		}
+	}
+	
+}
+
+/* LOGIN & REGISTER */
+
+.account_wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: space-between;
+	gap: 40px;
+	margin-top: 60px;
+
+	@include tablet {
+		grid-template-columns: 1fr;
+	}
+
+	form {
+		div {
+			margin-bottom: 20px;
+		}
+
+		.log-sign {
+			
+			.login-btn	{
+				padding: 15px 26px;
+				background-color: var(--add-to-cart);
+				cursor: pointer;
+				color: var(--color-primary);
+				font-size: 16px;
+				font-family: 'Source Sans Pro', sans-serif;
+				font-weight: 700;
+				border: none;
+				outline: none;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: var(--add-to-cart-hover);
+				}
+			}
+		}
+	}
+
+	.login {
+		h1 {
+			font-size: 26px;
+			margin-bottom: 30px;
+		}
+		div.checkbox_area {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 10px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@include phone-sm {
+				display: block;
+				
+			}
+
+			/* CHECKBOX */
+			.checkboxContainer input {
+				display: none;
+			}
+
+			.checkboxContainer {
+				display: inline-block;
+				padding-left: 30px;
+				position: relative;
+				cursor: pointer;
+				font-size: 22px;
+				line-height: 22px;
+				user-select: none;
+
+				span {
+					font-size: 16px;
+				}
+
+				@include phone-sm {
+					display: block;				
+					margin-bottom: 20px;
+				}
+			}
+
+			.checkboxContainer .checkmark {
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				background-color: var(--checkbox-bg);
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius: 3px;
+			}
+
+			.checkboxContainer input:checked + .checkmark {
+				background-color: var(--checkbox-bg);
+			}
+
+			.checkboxContainer:hover .checkmark {
+				background-color: var(--color-input-modal);
+				transition: all 0.3s;
+
+			}
+
+			.checkboxContainer input:checked + .checkmark:after {
+				content: "";
+				position: absolute;
+				height: 5px;
+				width: 9px;
+				border-left: 2px solid var(--color-tools);
+				border-bottom: 2px solid var(--color-tools);
+				top: 45%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(-45deg);
+			}
+
+			a {
+				color: var(--color-tools);
+				font-weight: 600;
+
+				&:hover {
+					color: var(--color-secondary);
+				}
+			}
+
+		}
+
+
+
+	}
+
+	.register {
+		h1 {
+			font-size: 26px;
+			margin-bottom: 30px;
+		}
+
+	}
+
+}
+
+.required{
+	color: #FF6363;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

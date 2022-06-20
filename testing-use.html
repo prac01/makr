@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initialscale=
+1.0">
+<title>Test inc-dec</title>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+
+	* {
+		position: relative;
+		box-sizing: border-box;
+		margin: 0; padding: 0;
+	}
+	body {
+		width: 100%;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		font-family: 'Lato', sans-serif;
+		background-color: #ececec;
+	}
+	h1 {
+		color: #888;
+		text-align: center;
+	}
+	.box {
+		background-color: #fff;
+		width: 320px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px; margin: 20px 0;
+		border-radius: 5px;
+		border: 1px solid #c6c6c6;
+		box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+	}
+
+	.box label {
+		margin-right:15px;
+	}
+	.box .button {
+		width: 37px;
+		height: 37px;
+		border: 1px solid #c6c6c6;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.box .button:active {
+		background-color: #ccc;
+	}
+	.box input {
+		width: 60px;
+		padding: 5px 10px;
+		border: 1px solid #c6c6c6;
+		border-radius: 5px;
+		font-size: 22px;
+		margin: 0 10px;
+	}
+	
+</style>
+
+</head>
+<body>
+<!-- CONTENT -->
+	<div class="box">
+		<label for="name">Males : </label>
+		<div class="dec button">-</div>
+		<input type="text" name="qty" id="1" value="0" class="input-filed">
+		<div class="inc button">+</div>
+	</div>
+
+	<div class="box">
+		<label for="name">Females : </label>
+		<div class="dec button">-</div>
+		<input type="text" name="qty" id="2" value="0" class="input-filed">
+		<div class="inc button">+</div>
+	</div>
+
+	<div class="box">
+		<label for="name">Childrens : </label>
+		<div class="dec button">-</div>
+		<input type="text" name="qty" id="3" value="0" class="input-filed">
+		<div class="inc button">+</div>
+	</div>
+
+	<div class="box">
+		<label for="name">Infants : </label>
+		<div class="dec button">-</div>
+		<input type="text" name="qty" id="4" value="0" class="input-filed">
+		<div class="inc button">+</div>
+	</div>
+	
+	
+
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+
+<script>
+	var incrementButton = document.getElementsByClassName('inc');
+	var decrementButton = document.getElementsByClassName('dec');
+
+	//console.log(incrementButton);
+	//console.log(decrementButton);
+
+	//INCREMENT 
+	for(var i = 0; i < incrementButton.length; i++) {
+		var button = incrementButton[i];
+		button.addEventListener('click', function() {
+
+			var buttonClicked = event.target;
+			//console.log(buttonClicked);
+			var input = buttonClicked.parentElement.children[2];
+			//console.log(input);
+			var inputValue = input.value;
+			//console.log(inputValue);
+			var newValue = parseInt(inputValue) + 1;
+			//console.log(newValue);
+			input.value = newValue;
+
+		})
+	}
+
+	//DECREMENT 
+	for(var i = 0; i < decrementButton.length; i++) {
+		var button = decrementButton[i];
+		button.addEventListener('click', function() {
+
+			var buttonClicked = event.target;
+			//console.log(buttonClicked);
+			var input = buttonClicked.parentElement.children[2];
+			//console.log(input);
+			var inputValue = input.value;
+			//console.log(inputValue);
+			var newValue = parseInt(inputValue) - 1;
+			//console.log(newValue);
+			if (newValue >= 0) {
+				input.value = newValue;
+			}
+			else {
+				input.value = 0;
+				//alert('QTY CAN NOT BE LESS THAN ZERO');
+			}
+
+		})
+	}
+
+</script>
+
+
+</body>
+</html>

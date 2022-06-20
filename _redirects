@@ -1,0 +1,18 @@
+/*	/404.html
+
+/product-detail    /404.html    
+/news-detail    /404.html    
+/sass    /404.html  
+/lib    /404.html 
+/js    /404.html  
+/img    /404.html    
+
+/product-detail/*    /404.html 
+/news-detail/*    /404.html  
+/sass/*    /404.html  
+/lib/*    /404.html 
+/js/*    /404.html  
+/img/*    /404.html         
+
+/*/*/ 	/404.html
+/*/*/*/*/*/*/*/* 	/404.html

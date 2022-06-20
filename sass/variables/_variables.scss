@@ -1,0 +1,259 @@
+
+
+/* Default Theme */ 
+:root {
+	--color-primary: #fff;
+	--color-secondary: #000;
+	--color-header: rgba(255,255,255, 0.98);
+	--color-nav-main: #7f7f7f;
+	--color-nav-bg: rgba(255,255,255, 0.99);
+	--color-nav-border: #ccc;
+	--color-logo: #111;
+	--color-tools: #111;
+	--color-tools-hover:#999;
+	--color-preloader: #222;
+	k: #111;
+	--color-primary-letter: #222;
+	--nav-hover-tab: #1a2730;
+
+
+	--color-nav-tablet: #222;
+	--color-nav-tablet-hover: #fff;
+
+	--color-scrollbar: #111;
+	--color-scrollbarHover: #262626;
+	--color-scrollbar-bg: #f1f1f1;
+	--color-scrollArrow: #fff;
+
+	--stripe-dark: #9c9c9c;
+	--stripe-light: #f0f0f0;
+	--bg-size: 5.66px 5.66px;
+
+	--color-modalbg: rgba(255,255,255, 0.99);	
+	--color-input-modal: #ccc;
+	--color-input-letter: #222;
+	--color-modal-header: #222;
+
+	--minicart-bg-wrap: rgba(34,34,34, 0.60);
+	--minicart-bg: rgba(34,34,34, 0.60);
+
+	--image-logo: url(img/logo.png);
+
+
+	--tooltip-bg: rgba(0,0,0,0.8);
+	--content-cnt:"Switch to dark theme";
+	--tooltip-text: #fff;
+
+/* BILLBOARD */
+	--color-billboard: #f5f5f5;
+	--color-billboard-hov: #fff;
+	--h2-billboard: #111;
+	--billboard-bg: #f0f0f0;
+
+/* LANDING PRODUCTS [NEWEST/BEST SELLER] */
+	--h1-newest: #111;
+	--products-bg: #f5f5f5;
+	--product-bg-hover: #fff;
+	--title-products-new: #111;
+	--price-newest: #ff0000;
+	--products-border: #ebebeb;
+	--landing-cart: #111;
+	--landing-cart-icon: #fff;
+
+/* NEWS & EVENTS LANDING PAGE*/
+	--news-date: rgba(0,0,0, 0.70);
+	--news-border-landing: #e1e1e1;
+	--news-p-landing: #666;
+
+/* SIDEBAR */
+	--sidebar-item: #f0f0f0;
+	--sidebar-color: #1a2730;
+
+
+/* PRODUCT DETAILS */
+
+	--the-quantity: #fff;
+	--the-button: #777;
+	--add-to-cart: #111;
+	--add-to-cart-hover: #222;
+	--num-border: #ccc;
+	--detail-parag: #777;
+	--star-color: #666;
+	--zoom-border: #e0e0e0;
+	--color-review: #bbb;
+	--activo-thumb: #ababab;
+	--zoom-image: #999;
+	--zoom-image-hover: #777;
+	--even-color: #f2f2f2;
+	--color-productPrice: #999;
+
+
+/* FOOTER */
+	--color-footer: #f5f5f5;
+	--color-header-footer: #111;
+	--color-subsBtn: #222;
+	--color-subsBtn-hov: #333;
+	--color-input-footer: #777;
+	--color-border-footer: #ccc;
+	--color-social: #999;
+	--color-social-hov: #222;
+
+	--pagination-news-border: #f1f1f1;
+
+/* FORM REVIEW */
+	--color-formBg: #fff;
+	--color-form-text: #999;
+	--checkbox-border: #ccc;
+	--checkbox-bg: #f1f1f1;
+	--form-border: #ccc;
+	--update-total: #f1f1f1;
+	--update-total-hover: #e1e1e1;
+}
+
+
+/* Dark Theme */
+.dark {
+	--color-primary: #222;
+	--color-secondary: #fff;
+	--color-header: rgba(34,34,34, 0.98);
+	--color-nav-main: #cccccc;
+	--color-nav-bg: rgba(34,34,34, 0.99);
+	--color-nav-border: rgba(87,87,87,1);
+	--color-logo: #c8c8c8;
+	--color-tools: #ccc;
+	--color-preloader: #c8c8c8;
+	--color-percentage: #fff;
+	--color-primary-letter: #f1f1f1;
+	--nav-hover-tab: #f1f1f1;
+
+
+	--color-nav-tablet: #fff;
+	--color-nav-tablet-hover: #222;
+
+	--color-scrollbar: #fff;
+	--color-scrollbarHover: #ccc;
+	--color-scrollbar-bg: #333;
+	--color-scrollArrow: #222;
+
+	--stripe-dark: #474747;
+	--stripe-light: #111111;
+	--bg-size: 5.66px 5.66px;
+
+	--color-modalbg: rgba(34,34,34, 0.99);
+	--color-input-modal: #333;
+	--color-input-letter: #666;
+	--color-modal-header: #ababab;
+
+	--minicart-bg-wrap: rgba(34,34,34, 0.60);
+	--minicart-bg: rgba(255,255,255, 0.60);
+
+	--image-logo: url(img/logo-dark.png);
+
+	--tooltip-bg: rgba(255,255,255,0.95);
+	--content-cnt:"Switch to light theme";
+	--tooltip-text: #222;
+
+/* BILLBOARD */
+	--color-billboard: #2c2c2c;
+	--color-billboard-hov: #222;
+	--h2-billboard: #ccc;
+	--billboard-bg: #1b1b1b;
+
+/* LANDING PRODUCTS [NEWEST/BEST SELLER] */
+	--h1-newest: #ccc;
+	--products-bg: #2c2c2c;
+	--product-bg-hover: #222;
+	--title-products-new: #777; /*#ccc;*/
+	--price-newest: #f1f1f1; /*#ccc;*/
+	--products-border: #464646;
+	--landing-cart: #f5f5f5; 
+	--landing-cart-icon: #111;
+
+/* NEWS & EVENTS LANDING PAGE*/
+	--news-date: rgba(255,255,255,0.70);
+	--news-border-landing: #333;
+	--news-p-landing: #777;
+
+/* SIDEBAR */
+	--sidebar-item: #333;
+	--sidebar-color: rgb(167, 167, 167);
+
+/* PRODUCT DETAILS */
+
+	--the-quantity: #222;
+	--the-button: #999;
+	--add-to-cart: #fff;
+	--add-to-cart-hover: #f1f1f1;
+	--num-border: #333;
+	--detail-parag: #777;
+	--star-color: #333;
+	--zoom-border: #333;
+	--color-review: #555;
+	--activo-thumb: #666;
+	--zoom-image: #777;
+	--zoom-image-hover: #444;
+	--even-color: #333;
+	--color-productPrice: #f1f1f1;
+
+
+/* FOOTER */
+	--color-footer: #262626;
+	--color-header-footer: #999;
+	--color-subsBtn: #c8c8c8;
+	--color-subsBtn-hov: #aaa;
+	--color-input-footer: #aaa;
+	--color-border-footer: #444;
+	--color-social: #999;
+	--color-social-hov: #fff;
+
+	--pagination-news-border: #333;
+
+/* FORM REVIEW */
+	--color-formBg: #222;
+	--color-form-text: #ababab;
+	--checkbox-border: #333;
+	--checkbox-bg: #111;
+	--form-border: #333;
+	--update-total: #333;
+	--update-total-hover: #111;
+
+}
+
+
+
+/* Screen Sizes */
+$container-width: 1200px;
+$tablet-lg: 1080px;
+$tablet-m: 930px;
+$tablet: 768px;
+$phone: 550px;
+$phone-medium: 480px;
+$phone-medium-s: 414px;
+$phone-sm: 360px;
+$phone-xsm: 280px;
+
+/* Paddings */ 
+/** wrapper **/
+$padding-main: 10px;
+$padding-mainTop: 51px;
+$padding-mainTopTablet: 34px;
+
+
+/* Fonts */ 
+$color__text-main: #111;
+$color__nav-main: #7f7f7f;
+
+/* Links */ 
+$color__link: #7f7f7f;
+$color__text-dark: #111;
+
+
+/* Border */ 
+
+
+
+
+
+
+
+

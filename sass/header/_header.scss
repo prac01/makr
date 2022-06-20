@@ -1,0 +1,547 @@
+@import "preloader";
+@import "tooltip";
+
+header {
+	transition: all 0.3s ease;
+	background: var(--color-primary);
+	position: fixed;
+	padding-top: $padding-mainTop;
+	padding-bottom: $padding-main;
+	top:0;
+	z-index: 200;
+
+		/*Add classfor jquery code*/
+
+		&.shrink {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		&.shrink nav {
+			
+		}
+		&.wala {
+			-webkit-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+			-moz-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+			box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+		}
+	
+		/*media query*/
+		@include tablet {
+			padding-top: $padding-mainTopTablet;
+			background: var(--color-header);
+			-webkit-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+			-moz-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+			box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+		}
+
+	.header {	
+
+		.headerSection {
+			display: grid;
+			align-items: center;
+			grid-template-columns: 8% 92%;
+			position: relative;
+			
+
+			/*media query*/
+				@include tablet {					
+					/*border-bottom: 1px solid #ccc;*/
+				}  
+
+			.logo {
+				background-image: var(--image-logo); 
+				height: 27px;
+				width: 40px;
+			}
+				
+			.navigation {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+					/*media query*/
+					@include tablet {
+						justify-content: flex-end;
+									
+					}  
+
+				.nav {
+
+						display: flex;
+						gap: 50px;
+						align-items: center;
+						z-index: 50;
+						/*active class nested!*/
+						&.active {
+							display:block;
+						} 
+
+						/*media query*/
+						@include tablet {
+							display: none;	
+							position: absolute;	
+							left:0;
+							right:0;
+							top:21px;	
+							width: 100%;
+							z-index: -10;	
+							transition: none;
+						}	
+
+					.nav-list {
+							/*media query*/
+							@include tablet {
+								height: 100%;							
+								margin-top: 16px;
+								-webkit-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+								-moz-box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+								box-shadow: 0px 2px 2px -2px rgba(87,87,87,1);
+								
+							} 
+							/*the max height of ul.nav-list for a shorter height screen*/
+							@include phone-height {			
+								overflow-y: scroll !important;
+								overflow-x: hidden !important;
+	            				max-height: 200px !important;    
+
+	            				&::-webkit-scrollbar {
+						            width: 4px;
+						            background-color:var(--color-scrollbar-bg);
+						        }
+						        &::-webkit-scrollbar-thumb {	
+						            	width: 4px;
+						                background-color:var(--color-scrollbar);
+						                border-radius: 10px;
+						        }
+						        &::-webkit-scrollbar-thumb:hover {
+									transition: all 0.4s ease; 
+									background-color: var(--color-scrollbarHover);
+								}        				
+							}
+
+
+						li {
+							display: inline-block;
+							margin-right: $padding-main;
+							position: relative;
+							letter-spacing: 0.6px;
+
+
+							a {
+								color: var(--color-nav-main);
+								/*color: $color__nav-main;*/
+								/**/
+								text-transform: uppercase;
+								font-weight: 600;
+								margin-right: 0px;
+								padding: 10px;	
+								display: block;
+								transition: all .4s ease;
+								position: relative;
+								z-index: 90;
+								
+								
+								/* Start of Hover Effect */
+								&::before {
+									background-color:var(--color-nav-main);
+				                    content:"";
+				                    position:absolute;
+				                    width:0;
+				                    left:50%;
+				                    height:3px;
+				                    bottom:0;
+				                    transition:all 0.5s ease;
+				                    z-index:-100;
+				                    border-radius: 10px;
+
+				                    @include tablet {
+				                    	/*background-color: orange;*/
+				                    	background-color: var(--nav-hover-tab);
+				                    	height:100%;
+				                    	clip-path: polygon(3% 0, 100% 0%, 97% 100%, 0% 100%);
+				                    	border-radius: 0;
+				                    }
+				                    
+								}
+
+								&:hover::before{
+									width:100%;							
+                    				left:0;
+								}
+								/* End of Hover Effect */
+
+								/*Media Query of a*/
+								@include tablet {
+									color: var(--color-nav-tablet);
+									background-color: var(--color-nav-bg);
+									display: block;
+									padding-top:13px;
+									padding-bottom:13px;
+									text-align: center;
+									&:hover {
+										color:var(--color-nav-tablet-hover);
+										transition: none;
+									}
+								} 
+							}
+
+							/*media query*/
+							@include tablet {
+								/*background: rgba(255,255,255, 0.97);*/
+								border-bottom: 1px solid var(--color-nav-border);
+								border-left: 1px solid var(--color-nav-border);
+								border-right: 1px solid var(--color-nav-border);	
+								width: 100%;
+
+									&:first-child {
+										border-top: 1px solid var(--color-nav-border);
+									}
+
+									&:hover {
+										
+									}
+							} 
+
+							
+						}
+					}
+					
+				}
+				
+					.tools {
+
+						.options {
+
+							span {
+								display: inline-block;
+								align-items: center;
+								margin-right:$padding-main;
+								color: var(--color-tools);
+								cursor: pointer;
+								font-size: 21px;
+								position: relative;
+								transition: all 0.3s;
+
+								a {
+									color: var(--color-tools);
+									transition: all 0.3s;
+									&:hover {
+										color: var(--color-tools-hover);
+									}
+								}
+
+								.menubar {
+									display: none;
+									@include tablet {
+								        color: var(--color-tools); 
+								        display:block;
+								        cursor: pointer;
+								        margin-left: $padding-main;
+								        font-size: 21px;
+								   }
+								}
+
+								&:last-child {
+									margin-right:0px;
+								}
+
+								&:hover {
+									color: var(--color-tools-hover);
+								}
+
+								&.nav-mode_switch {
+									margin:0;
+									padding:0;
+								}
+							}
+
+							.cart-nav {
+								position: relative;
+								.cart-number {
+									font-family: 'Roboto', sans-serif;
+									position: absolute;
+									background-color: #FF6363;
+									align-items: center;
+									/*padding:2px 5px 2px 5px;*/
+									padding: 3px 5px;
+									text-align: center;
+									/*color: var(--color-primary);*/
+									color: #fff;
+									z-index: 100;
+									left: 15px;
+									/*top:-6px;*/
+									bottom: -6px;
+									border-radius: 100%;
+									font-size: 12px;
+
+									&:hover {
+										/*background-color: #FF8C00;*/
+									}
+								}
+							}
+
+							button {
+								border: none;
+								outline: none;
+								background-color: transparent;
+								cursor: pointer;
+
+								i {
+									color: var(--color-tools); 
+									font-size: 21px;
+									transition: all 0.3s;
+
+									&:hover {
+										color: var(--color-tools-hover);
+									}
+								}
+							}
+						}
+					}
+			}
+				
+		}
+	}
+	
+@import "scroll-top";
+@import "modals";
+
+
+}
+
+/* seperate class [minicart] */
+.js-menu__context {
+  background: rgba(0,0,0, 0.5);
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 40000;
+  overflow-y: auto;
+
+}
+.js-menu::-webkit-scrollbar {
+    width: 9px !important;
+    /*background-color:color(featuredBg);*/
+    background-color: var(--color-scrollbar-bg);
+    transition: all 0.4s ease; 
+}
+.js-menu::-webkit-scrollbar-thumb {
+    width: 9px !important;
+    transition: all 0.4s ease; 
+    background-color: var(--color-scrollbar);      
+}
+.js-menu::-webkit-scrollbar-thumb:hover {
+	transition: all 0.4s ease; 
+	background-color: var(--color-scrollbarHover);
+}
+
+.js-menu {
+  color: var(--color-tools);
+  position: absolute;
+  height: 100%;
+  width: 360px;
+  max-width: 85vw;
+  padding: 12px;
+  margin: 0;
+  background: var(--color-primary);
+  z-index: 99;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.js-menu--left {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.js-menu--right {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    position: absolute;
+    right: 0;
+
+    	webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	-ms-transition:0.3s;
+	-o-transition:0.3s;
+	transition:0.3s;
+}
+.js-menu__open {
+  cursor: pointer;
+}
+
+
+.js-menu__close {
+  cursor: pointer;
+}
+
+
+.js-menu__expanded {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+
+	webkit-transition:0.3s;
+	-moz-transition:0.3s;
+	-ms-transition:0.3s;
+	-o-transition:0.3s;
+	transition:0.3s;
+}
+
+/* INSIDE MINICART ITEMS */
+.minicart-header {
+	margin-top: 20px;
+}
+
+.minicart-items::-webkit-scrollbar {
+    width: 9px !important;
+    /*background-color:color(featuredBg);*/
+    background-color: var(--color-scrollbar-bg);
+    transition: all 0.4s ease; 
+}
+.minicart-items::-webkit-scrollbar-thumb {
+    width: 9px !important;
+    transition: all 0.4s ease; 
+    background-color: var(--color-scrollbar);      
+}
+.minicart-items::-webkit-scrollbar-thumb:hover {
+	transition: all 0.4s ease; 
+	background-color: var(--color-scrollbarHover);
+}
+
+.minicart-items {
+    padding: 15px 10px;
+    background-color: var(--color-primary);
+    overflow-y: auto;
+    height: 60vh;
+
+	.minicart_row{
+		padding: 10px;
+		position: relative;
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    border-bottom: 1px solid var(--products-border);
+
+	    .minicart-details {
+	    	.mini_cart_title {
+	    		margin-bottom: 10px;
+	    		a {
+	    			font-size: 18px;
+	    			color: var(--color-primary-letter);
+	    		}
+	    	}
+
+	    	.minicartPrice {
+	    		color: var(--news-p-landing);
+	    		font-size: 18px;
+	    	}
+	    }
+
+	    .remove-x-minicart {
+            position: absolute;
+            top: 18px;
+            right: 1%;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0px 3px 32px 0px rgba(0,0,0,0.4);
+            -webkit-box-shadow: 0px 3px 32px 0px rgba(0,0,0,0.4);
+            -moz-box-shadow: 0px 3px 32px 0px rgba(0,0,0,0.4);
+            padding: 1px 6px;
+            background-color: var(--color-secondary);
+            color:var(--color-primary);
+            border-radius: 50%;
+        }
+
+		.mini-cart-img {
+
+			
+
+			.figure {
+                width: 70px;
+                height: 120px;
+                overflow: hidden;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                vertical-align: center;
+                
+                
+
+                a {
+                    background-color: var(--products-bg);
+                    img {
+                        width: 100%;
+                        height: auto;
+                        padding: 10px 15px;
+                    }
+                }
+                
+            }
+		}
+
+		.product_cart_title {}
+		.productPrice {}
+		.quantity-options {
+			/* see box */
+		}
+		.subtotal-price {}
+	}
+}
+
+.subtotal_mini_cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-transform: uppercase;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.view_cart_option {
+	text-transform: uppercase;
+	align-items: center;
+
+	.viewCart_btn {
+		background-color: var(--color-input-modal);
+		color: var(--color-tools);
+		display: block;
+		text-align:center;
+		margin-top: 10px;
+		padding: 15px 0;
+		width: 90%;
+		font-size: 14px;
+		transition: all 0.3s;
+		&:hover {
+			background-color:var(--color-scrollbar-bg);
+		}
+	}
+	.checkout_btn {
+		background-color: var(--color-preloader);
+		color: var(--color-primary);
+		display: block;
+		text-align:center;
+		margin-top: 10px;
+		padding: 15px 0;
+		width: 90%;
+		font-size: 14px;
+		transition: all 0.3s;
+		&:hover {
+			background-color:var(--color-tools);
+		}
+	}
+}
+
+
+
+
+

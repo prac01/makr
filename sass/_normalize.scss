@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+	/*transition: all 0.3s ease;*/
+
+}
+ul {
+	padding:0;
+	margin: 0;
+	list-style-type: none;
+}
+li {
+ 	padding:0;
+	margin: 0;
+	list-style-type: none;
+}
+span {
+	padding:0;
+	margin: 0;
+}
+img {
+	display: block;
+}
+a {
+	text-decoration: none;
+}
+p {
+	/*font-family: 'Roboto', sans-serif;*/
+	letter-spacing: 0.3px;
+    line-height: 1.6;
+    color: var(--news-p-landing);
+    font-weight: 400;
+}
+html {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+body::-webkit-scrollbar {
+    width: 9px !important;
+    /*background-color:color(featuredBg);*/
+    background-color: var(--color-scrollbar-bg);
+    transition: all 0.4s ease; 
+}
+body::-webkit-scrollbar-thumb {
+    width: 9px !important;
+    transition: all 0.4s ease; 
+    background-color: var(--color-scrollbar);      
+}
+body::-webkit-scrollbar-thumb:hover {
+	transition: all 0.4s ease; 
+	background-color: var(--color-scrollbarHover);
+}
+body {
+	 position: relative;
+	 background: var(--color-primary);
+	 color: var(--color-primary-letter);
+	 /*transition: all 0.3s ease; 
+	 not working! kailangan talaga ilagay saya sa  * {} */
+}
+/* Wrapper */
+.container {
+	max-width: $container-width;
+	margin: 0 auto;
+	padding: 0 10px 0 10px;
+}
+
+/* Full Width */
+
+.container-full {
+	width: 100%;
+}
+
+/* Dark Mode Button Change */
+.dark #nav-mode_switch .fa-sun {
+  display: none;
+}
+
+.dark #nav-mode_switch .fa-moon {
+  display: block;
+}
+
+#nav-mode_switch .fa-moon {
+  display: none;
+}
+
+
+/* text transform and alignment */
+.uppercase {
+	text-transform: uppercase !important;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+.center {
+	text-align: center !important;
+}
+
+/* SALE */
+.sale-notice {
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.sale {
+	background-color:#FF6363;
+	border-radius: 50%;
+	width: 50px;
+	padding:16px 9px;
+	text-align: center;
+	margin:0 auto;
+	margin-top: 4px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+
+}
+
+.percent-30 {
+	background-color:#5F7161;
+	border-radius: 50%;
+	padding:14px 3px;
+	width: 45px;
+	text-align: center;
+	margin:0 auto;
+	margin-top: 4px;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+
+}
+
+.new-product-display {
+	background-color:#E4D1B9;
+	font-weight: 500;
+	padding:6px 13px;
+
+	right: 0;
+	top: 0;
+	color: #333;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+
+}
+
+
+
+/* Testing */
+.toltip {
+	background-color: blue !important;
+}
+
+
+
