@@ -1,0 +1,46 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+.tooltip {
+	position: relative;
+	background: #f2395a;
+	color:#fff;
+	text-align: center;
+	font-size: 17px;
+
+}
+
+.tooltip:hover::before {
+	display: inline-block;
+	opacity: 1;
+}
+
+.tooltip::before {
+	position: absolute;
+	z-index: 2;
+	display: none;
+	width: 150px;
+	padding: 10px;
+	font-size: 0.8em;
+	letter-spacing: 0.6px;
+	line-height: 1.4em;
+	border-radius: 5px;
+	background-color: var(--tooltip-bg);
+	color: var(--tooltip-text);
+	content: var(--content-cnt);
+
+	top: calc(100% + 18px);
+	left: -55px;
+	transform: translateX(-50%);
+
+	@include tablet {
+		top: calc(100% + 11px);
+	}
+
+}
+
+
+

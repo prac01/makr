@@ -1,0 +1,49 @@
+/* Billboard */
+@import "sass/contents/landing-page/billboard";
+@import "sass/contents/landing-page/ads";
+
+/* Newest Products */
+@import "newest-products-section";
+
+/* News & Events Section */
+@import "news-events-section";
+
+/****************************************
+	SEPARATE CLASSES
+****************************************/
+
+.landingHead {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	h1 {
+		font-size: 26px;
+		color: var(--h1-newest);
+		font-weight: 600;
+
+		@include phone {
+			font-size: 23px;
+		}
+	}
+
+	h2 {
+		font-size: 23px;
+		color: var(--h1-newest);
+		font-weight: 600;
+
+		@include phone {
+			font-size: 20px;
+		}
+	}
+
+	a {
+		font-weight: 600;
+		color: #999;
+		padding-bottom:0px;
+		border-bottom: 1px solid #999;
+		&:hover {
+			color: #666;
+		}
+	}
+}

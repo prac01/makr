@@ -1,0 +1,250 @@
+@import "../sidebar/sidebar";
+
+.product_list_wrap {
+	margin-bottom:120px;
+	padding-top: 138px;
+	display: grid;
+	grid-template-columns: 22% 78%;
+	gap:5px;
+
+	@include tablet-lg {
+		grid-template-columns: 1fr 2.6fr;
+		
+	}
+
+	@include tablet-m {
+		grid-template-columns: 1fr 2.4fr;
+
+	}
+
+	@include tablet {
+		grid-template-columns: 1fr;
+		padding-top: 100px;
+	}
+	@include phone {
+		grid-template-columns: 1fr;
+	}
+
+	.productListSection {
+		/*background-color: #999;*/
+		padding:0px 10px 0 10px;
+		/*margin-top: 60px;
+  		margin-bottom: 60px;*/
+
+  		@include tablet {
+  			padding-top: 10px;
+  		}
+
+			.grid_products {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-template-rows: auto;
+				justify-content: center;
+				align-items: center;
+				align-self: center;
+				grid-gap: 10px;
+
+				@include tablet-m {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				@include tablet {
+					/*grid-template-columns: repeat(2, 1fr);*/
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				@include phone {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				@include phone-xsm {
+					grid-template-columns: 1fr;
+				}
+
+				.grid_products_list:hover {
+					
+					background-color: var(--product-hover);
+					border: 1px solid var(--products-border);
+				}
+				.grid_products_list:hover .price_product_section {
+					top:0px;
+					left: 0px;
+				}
+
+				.grid_products_list {
+					background-color: var(--products-bg);
+					width: 100%;
+					height: 100%;
+					padding: 40px 10px 40px 10px;
+					border: 1px solid var(--products-bg);
+					transition: all 0.3s ease;
+					position: relative;
+					overflow: hidden;
+
+					
+
+					.price_product_section {
+						position: absolute;
+						top: -106px;
+						left:-106px;
+						z-index: 90;
+						width: 106px;
+						height: 100px;
+						clip-path: polygon(0 0, 0 100%, 100% 0);
+						color: #fff;
+						background-color: var(--landing-cart);
+						transition: all 0.5s ease;
+						
+						font-size: 20px;
+						a {
+							color: var(--landing-cart-icon);
+							display: block; 
+							padding: 20px 20px;
+						}
+					}
+					/* DUAL HOVER METHOD */
+					.img_frame:hover img {
+						transform: scale(1.1);
+					}
+					.img_frame {
+						height: 207px;
+						width: auto;
+						display: grid;
+						grid-template-columns: 1fr;
+						justify-content: center;
+						align-items: center;
+						overflow: hidden;
+
+
+						img {
+							transition: all 0.5s;
+							display: block;
+							max-width: 126px;
+							max-height: 200px;
+
+							@include tablet-lg {
+								max-width:150px;
+								max-height: 180px;
+							}
+							@include phone-medium {
+								max-width:120px;
+								max-height: 170px;
+							}
+							@include phone {
+								max-height: 150px;
+							}
+							@include phone-sm {
+								max-height: 130px;
+							}
+							@include phone-xsm {
+								max-height: 150px;
+							}
+						}
+
+						
+					}
+					
+					/* FOR WIDER IMAGE BUT SHORT HEIGHT */
+					.img_wide {
+						width: 100%;
+						img {
+							width: 100% !important;
+
+							@include tablet {
+								max-width:250px;
+							}
+							@include phone-sm {
+								max-width: 119px;
+							}
+						}
+					}
+
+					/* FOR LONGER IMAGE BUT SHORT WIDTH */
+					.img_long {
+						height: 100%;
+						overflow: hidden;
+						img {
+							height: 300px !important;
+							width: auto;
+							@include tablet {
+								max-width:250px;
+							}
+							@include phone-sm {
+								max-width: 119px;
+							}
+						}
+					}
+
+
+					.product_title {
+						color: var(--title-products-new);
+						font-size: 18px;
+						font-weight: 600;
+						margin-top: 30px;
+						margin-bottom: 8px;
+					}
+					.product_price_new {
+						color: var(--price-newest);
+					}
+				}
+			}
+		
+
+	}
+}
+
+/* Separate css */
+.grid-products {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	grid-gap: 10px;
+}
+
+
+.product_showing {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: var(--color-nav-main);
+	margin-bottom:20px;
+
+
+	.showing_number {
+
+	}
+	.view_optional {
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		gap:8px;
+		a {
+			transition: all 0.2s ease;
+
+			.view_frame {
+				width: 32px;
+				height: 32px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid var(--zoom-border);
+				img {
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			&:hover {
+				opacity: 0.7;
+			}			
+		}
+
+	}
+}
+
+
+
+

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link Swiper's CSS -->
+    <link href="./lib/swiper.css" rel="stylesheet" />
+    <link href="./lib/swiper.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="preloader-wrap">
+        <div class="percentage" id="precent"></div>
+        <div class="loader">
+            <div class="trackbar">
+                <div class="loadbar"></div>
+            </div>
+            <div class="glow"></div>
+        </div>
+    </div>
+    <!-- put this to js code to avoid light background flickering when you hit refresh -->
+    <script>
+        const theme = localStorage.getItem('theme') || 'light';
+        document.body.className = theme;
+    </script>
+<header class="container-full"><!--start of header-->
+    <div class="header container">
+        <div class="headerSection"><!--start of headerSection-->
+            <a href="index.html"><div class="logo"></div></a>
+            <div class="navigation"><!--start of navigation-->
+                <nav class="nav">                           
+                    <ul class="nav-list">
+                        <li class="center"><a href="index.html">Home</a></li>
+                        <li class="center"><a href="about.html">About</a></li>
+                        <li class="center"><a href="products.html">Products</a></li>
+                        <li class="center"><a href="news.html">News</a></li>
+                        <li class="center"><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="tools"><!--start of tools-->
+                    <div class="options">
+                        <span id="searchTop-btn"><i class="fas fa-search"></i></span>
+                         <span><a href="account.html"><i class="fa-solid fa-user-large"></i></a></span>
+                        <span class="cart-nav">
+                            <div class="cart-number">10</div>
+                            <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                        </span>
+                        <button type="button" id="nav-mode_switch" class="tooltip">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <span><i class="fas fa-bars menubar"></i></span>
+                        <span class="js-menu__open" data-menu="#main-nav"><i class="fa-solid fa-angle-left"></i></span>
+                    </div>
+                </div><!--end of tools-->
+
+            
+            </div><!--end of navigation-->
+            
+            
+        </div><!--end of headerSection-->
+    </div>  <!--end of header-->
+    
+    <!--Start of Scroll Top Button-->
+    <button id="scrollTop" class="scrollTop"><i class="fa-solid fa-angles-up"></i></button>
+    <!--End of Scroll Top Button-->
+
+    <!--HIDDEN ELEMENTS [MODAL]-->
+    <!--SEARCH MODAL-->
+    <div id="modalTwo" class="search-modal-wrap">                
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <span class="search-icon-modal">
+                    <i class="fas fa-search"></i> 
+                </span>
+                <span class="closeBtn">
+                        &times;
+                </span>
+            </div>
+            <center><div class="logo"></div></center>
+            
+            <form>
+                
+                <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Search here .." { this.value = 'Search here'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+            </form> 
+        </div>
+    </div> 
+    <!--END OF SEARCH MODAL-->
+    <!--END OF HIDDEN ELEMENTS [MODAL]-->
+
+</header><!--end of header-->
+
+<!-- BILLBOARD -->
+<div class="cart-billboard">
+    <div class="cart-header container">
+        <div>
+            <h1 class="cart-title">Your Cart</h1>
+        </div>
+    </div>
+</div>
+
+<!-- START OF CONTENT -->
+<section class="cart_wrapper container">
+<!-- CART ITEMS -->
+    <section class="cart_items">
+        <div class="table_area">
+            <table class="table_cart">
+                <thead>
+                  
+                    <tr>
+                        <th></th>
+                        <th>product</th>
+                        <th>price</th>
+                        <th>quantity</th>
+                        <th>subtotal</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="product_row">
+                        <td class="product-cart-img">
+                            <span class="remove-x"><i class="fa-solid fa-xmark"></i></span>
+                            <center>
+                                <figure class="product_img_wrap">
+                                
+                                    <a href="#">
+                                        <img src="./img/headphone-2.png">
+                                    </a>
+                                    
+                                    <a href="#" title="remove product"></a>
+                                </figure>
+                            </center>
+                        </td>
+
+                        <td>
+                            <h5 class="product_cart_title">
+                                <a href="#">Men Watch</a>
+                            </h5>
+                        </td>
+
+                        <td class="productPrice">$17.50</td>
+
+                        <td class="quantity-options">
+                            <div class="box">
+                                <div class="inc button">+</div>
+                                <input type="text" name="qty" id="1" value="0" class="input-filed">
+                                <div class="dec button">-</div>
+                            </div>      
+                        </td>
+
+                        <td>
+                            <span class="subtotal-price">$17.50</span>
+                        </td>                     
+                    </tr>
+
+                    <tr class="product_row">
+                        <td class="product-cart-img">
+                            <span class="remove-x"><i class="fa-solid fa-xmark"></i></span>
+                            <center>
+                                <figure class="product_img_wrap">
+                                <a href="#">
+                                    <img src="./img/seiko.png">
+                                </a>
+                                <a href="#" title="remove product"></a>
+                            </figure>
+                            </center>
+                        </td>
+
+                        <td>
+                            <h5 class="product_cart_title">
+                                <a href="#">Men Watch</a>
+                            </h5>
+                        </td>
+
+                        <td class="productPrice">$17.50</td>
+
+                        <td class="quantity-options">
+                            <div class="box">
+                                <div class="inc button">+</div>
+                                <input type="text" name="qty" id="2" value="0" class="input-filed">
+                                <div class="dec button">-</div>
+                            </div>        
+                        </td>
+
+                        <td>
+                            <span class="subtotal-price">$17.50</span>
+                        </td>                     
+                    </tr>
+
+                    <tr class="product_row">
+                        <td class="product-cart-img">
+                            <span class="remove-x"><i class="fa-solid fa-xmark"></i></span>
+                            <center>
+                                <figure class="product_img_wrap">
+                                <a href="#">
+                                    <img src="./img/watch-1.png">
+                                </a>
+                                <a href="#" title="remove product"></a>
+                            </figure>
+                            </center>
+                        </td>
+
+                        <td>
+                            <h5 class="product_cart_title">
+                                <a href="#">Men Watch</a>
+                            </h5>
+                        </td>
+
+                        <td class="productPrice">$17.50</td>
+
+                         <td class="quantity-options">
+                            <div class="box">
+                                <div class="inc button">+</div>
+                                <input type="text" name="qty" id="3" value="0" class="input-filed">
+                                <div class="dec button">-</div>
+                            </div>         
+                        </td>
+
+                        <td>
+                            <span class="subtotal-price">$17.50</span>
+                        </td>                     
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <div class="coupon-area">
+            <div class="coupon-form">
+                <input type="text" name="" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Coupon Code" { this.value = 'Coupon Code'; this.style.color = '#000';}>
+
+                <button class="update-cart apply-coupon">
+                    APPLY COUPON
+                </button>
+            </div>
+
+            <button class="update-cart">
+                UPDATE CART
+            </button>
+
+        </div>
+
+
+    </section><!-- end of cart_items-->
+
+<!-- CART TOTALS -->
+<section class="cart_total">
+    <div class="cart_summary">
+        <h1>Cart Totals</h1>
+
+        <div class="table">
+            <div class="subtotal">
+                <h4>Subtotal</h4>
+                $17.50
+            </div>
+
+            <div class="shipping_options">
+                <h4>Shipping</h4>
+
+                <div class="radio-group">
+                    <div class="custom-radio">
+                        <input type="radio" name="radio" checked>
+                        <label class="custom-label">Local pickup</label>
+                    </div>
+                </div>
+
+                <div class="radio-group">
+                    <div class="custom-radio">
+                        <input type="radio" name="radio">
+                        <label class="custom-label">Flat rate</label>
+                    </div>
+                </div>
+
+                <form action="#">
+                    <div class="form-group">
+                        <label>Shipping to <strong>NY.</strong></label>
+                        <div class="select-custom">
+                            <select class="select-control">                        
+                                <option value="USA">United States (US)</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="China">China</option>
+                                <option value="Germany">Germany</option>
+                            </select>
+                        </div>
+                        <div class="select-custom">
+                            <select class="select-control">                        
+                                <option value="NY">New york</option>
+                                <option value="California">California</option>
+                                <option value="Texas">Texas</option>
+                            </select>
+                        </div>
+
+                        <div class="select-custom">
+                            <input type="text" name="" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Town / City" { this.value = 'Town / City'; this.style.color = '#000';}>
+                        </div>
+
+                        <div class="select-custom">
+                            <input type="text" name="" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="ZIP" { this.value = 'ZIP'; this.style.color = '#000';}>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="update-cart">
+                        Update totals
+                    </button>
+                </form>
+
+                <div class="tfoot">
+                    <h4>Total</h4>
+                    <h2 class="total-price">$17.50</h2>    
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-methods">
+            <a href="checkout.html">
+                Proceed to Checkout
+                <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- MINICART -->
+<div class="js-menu__context">
+
+  <div id="main-nav" class="js-menu js-menu--right">
+    <span class="js-menu__close">Close x</span>   
+    
+    <div class="minicart-header">
+        <h1>Your Cart</h1>
+    </div>
+
+    <div class="minicart-items">
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Seiko Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/seiko.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/watch-1.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+    </div><!-- end of minicart-items -->
+
+    <div class="subtotal_mini_cart">
+        <h4>Subtotal:</h4>
+        <h3>$220.00</h3>
+    </div>
+
+    <div class="view_cart_option">
+        <center><a class="viewCart_btn" href="cart.html">view cart</a></center>
+        <center><a class="checkout_btn" href="checkout.html">checkout</a></center>
+    </div>
+
+  </div>
+</div>
+<!-- END OF MINICART -->
+
+</section><!-- end of cart_wrapper -->
+
+
+
+<!-- FOOTER -->
+<footer class="footer container-full"><!--start of footer-->
+    <section class="subscribe-area container">
+        <h1 class="subscribe_header">Subscribe to our news</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam porta, dictum odio ut, congue odio. Etiam odio sapien, feugiat sed diam vitae, rhoncus iaculis justo.</p>
+
+        <section class="news-form">
+            <form autocomplete="off">
+                
+                <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Enter your email.." { this.value = 'Enter your email'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+                <button class="subscribe_btn">Subscribe</button>
+            </form>
+        </section> 
+
+    </section>
+
+    <section class="bottomwrap container-full">
+        <section class="bottom_footer container">
+            <div class="copyright"><p>© 2018</p></div>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            </div>
+        </section>
+    </section>
+
+</footer><!--end of footer-->
+
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/preloader.js"></script>
+<!-- Link Swiper's JS -->
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<!-- End of Link Swiper's JS -->
+<script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>

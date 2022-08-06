@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>News & Events</title>
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Link Swiper's CSS -->
+    <link href="./lib/swiper.css" rel="stylesheet" />
+    <link href="./lib/swiper.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+<body>
+	<div class="preloader-wrap">
+    	<div class="percentage" id="precent"></div>
+        <div class="loader">
+            <div class="trackbar">
+            	<div class="loadbar"></div>
+            </div>
+            <div class="glow"></div>
+        </div>
+    </div>
+	<!-- put this to js code to avoid light background flickering when you hit refresh -->
+	<script>
+	    const theme = localStorage.getItem('theme') || 'light';
+	    document.body.className = theme;
+    </script>
+<header class="container-full"><!--start of header-->
+    <div class="header container">
+        <div class="headerSection"><!--start of headerSection-->
+            <a href="index.html"><div class="logo"></div></a>
+            <div class="navigation"><!--start of navigation-->
+                <nav class="nav">                           
+                    <ul class="nav-list">
+                        <li class="center"><a href="index.html">Home</a></li>
+                        <li class="center"><a href="about.html">About</a></li>
+                        <li class="center"><a href="products.html">Products</a></li>
+                        <li class="center"><a href="news.html">News</a></li>
+                        <li class="center"><a href="contact-us.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="tools"><!--start of tools-->
+                    <div class="options">
+                        <span id="searchTop-btn"><i class="fas fa-search"></i></span>
+                         <span><a href="account.html"><i class="fa-solid fa-user-large"></i></a></span>
+                        <span class="cart-nav">
+                            <div class="cart-number">10</div>
+                            <a href="cart.html"><i class="fas fa-shopping-basket"></i></a>
+                        </span>
+                        <button type="button" id="nav-mode_switch" class="tooltip">
+                            <i class="fas fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <span><i class="fas fa-bars menubar"></i></span>
+                        <span class="js-menu__open" data-menu="#main-nav"><i class="fa-solid fa-angle-left"></i></span>
+                    </div>
+                </div><!--end of tools-->
+
+            
+            </div><!--end of navigation-->
+            
+            
+        </div><!--end of headerSection-->
+    </div>  <!--end of header-->
+    
+    <!--Start of Scroll Top Button-->
+    <button id="scrollTop" class="scrollTop"><i class="fa-solid fa-angles-up"></i></button>
+    <!--End of Scroll Top Button-->
+
+    <!--HIDDEN ELEMENTS [MODAL]-->
+    <!--SEARCH MODAL-->
+    <div id="modalTwo" class="search-modal-wrap">                
+        <div class="search-modal-content">
+            <div class="search-modal-header">
+                <span class="search-icon-modal">
+                    <i class="fas fa-search"></i> 
+                </span>
+                <span class="closeBtn">
+                        &times;
+                </span>
+            </div>
+            <center><div class="logo"></div></center>
+            
+            <form>
+                
+                <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Search here .." { this.value = 'Search here'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+            </form> 
+        </div>
+    </div> 
+    <!--END OF SEARCH MODAL-->
+    <!--END OF HIDDEN ELEMENTS [MODAL]-->
+
+</header><!--end of header-->
+
+<!-- START OF CONTENT -->
+<!-- BILLBOARD -->
+<div class="newsPage-billboard">
+    <div class="newsPage-header container">
+        <h1 class="newsPage-title">News & Events</h1>
+    </div>
+</div>
+
+
+<!-- CONTENT -->
+<!-- NEWS AND EVENTS SECTION -->
+    <div class="news-and-events-newsPage-listView">
+        <div class="news_event_section container">
+            <div class="product_showing">
+                <p class="showing_number">Showing 1–9 of 40 results</p>
+                <div class="view_optional">
+                    <a href="news.html">
+                        <div class="view_frame">
+                            <img src="img/grid-3.png">
+                        </div>
+                    </a>
+                    <a href="news-grid-2.html">
+                        <div class="view_frame">
+                            <img src="img/grid-2.png">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="view_frame">
+                            <img src="img/list.png">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <ul class="news_event_content-page">
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-1.png" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>27</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 1</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                            <img src="./img/news-2.png" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>20</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 2</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-3.png" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>18</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 3</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-4.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>14</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 4</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-5.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>10</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 5</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-6.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>9</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 6</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-7.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>9</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 7</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                       
+                            <img src="./img/news-8.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>9</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 8</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+                <li class="news_list_page">
+                    <div class="imgNewsFramePage">
+                        <div class="detail_options">
+                            <div>
+                                <a href="news-detail/news-detail-left-sidebar.html" class="link_option">Left sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail.html" class="link_option">Right sidebar</a>
+                            </div>
+                            
+                            <div>
+                                <a href="news-detail/news-detail-fullwidth.html" class="link_option">FullWidth</a>
+                            </div>
+                        </div>
+
+                        
+                            <img src="./img/news-9.jpg" />
+                        
+                        <div class="news_date">
+                            <div><h1>FEB</h1></div>
+                            <div><h3>9</h3></div>
+                        </div>
+                    </div>
+                    <section class="newsDetailsPage">
+                        <h1 class="title">Title Here 9</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mauris quam, gravida a ultrices ac, sodales at est. Nunc leo turpis, tincidunt at nunc quis, semper placerat eros. Aenean a efficitur turpis [..]</p>
+                    </section>
+                </li>
+
+            </ul>
+
+            <!-- pagination -->
+
+            <div class="pagination_news">
+                <div class="pagination_wrapper">
+                    <a href="#">&laquo;</a>
+                    <a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">6</a>
+                    <a href="#">...</a>
+                    <a href="#">&raquo;</a>
+                </div>
+            </div>
+            
+        </div> 
+    </div>
+
+<!-- MINICART -->
+<div class="js-menu__context">
+
+  <div id="main-nav" class="js-menu js-menu--right">
+    <span class="js-menu__close">Close x</span>   
+    
+    <div class="minicart-header">
+        <h1>Your Cart</h1>
+    </div>
+
+    <div class="minicart-items">
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Seiko Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/seiko.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/watch-1.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="./img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+    </div><!-- end of minicart-items -->
+
+    <div class="subtotal_mini_cart">
+        <h4>Subtotal:</h4>
+        <h3>$220.00</h3>
+    </div>
+
+    <div class="view_cart_option">
+        <center><a class="viewCart_btn" href="cart.html">view cart</a></center>
+        <center><a class="checkout_btn" href="checkout.html">checkout</a></center>
+    </div>
+
+  </div>
+</div>
+<!-- END OF MINICART -->
+
+
+<!-- FOOTER -->
+<footer class="footer container-full"><!--start of footer-->
+    <section class="subscribe-area container">
+        <h1 class="subscribe_header">Subscribe to our news</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam porta, dictum odio ut, congue odio. Etiam odio sapien, feugiat sed diam vitae, rhoncus iaculis justo.</p>
+
+        <section class="news-form">
+            <form autocomplete="off">
+                
+                <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Enter your email.." { this.value = 'Enter your email'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+                <button class="subscribe_btn">Subscribe</button>
+            </form>
+        </section> 
+
+    </section>
+
+    <section class="bottomwrap container-full">
+        <section class="bottom_footer container">
+            <div class="copyright"><p>© 2018</p></div>
+            <div class="social_media">
+                <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+            </div>
+        </section>
+    </section>
+
+</footer><!--end of footer-->
+
+
+<script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="js/preloader.js"></script>
+<!-- Link Swiper's JS -->
+<script type="text/javascript" src="js/swiper.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<!-- End of Link Swiper's JS -->
+<script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>

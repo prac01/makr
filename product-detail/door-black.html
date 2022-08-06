@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Door Black</title>
+	<link rel="stylesheet" href="../style.css">
+
+	<!-- Link Swiper's CSS -->
+    <link href="../lib/swiper.css" rel="stylesheet" />
+    <link href="../lib/swiper.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+</head>
+<body>
+	<div class="preloader-wrap">
+    	<div class="percentage" id="precent"></div>
+        <div class="loader">
+            <div class="trackbar">
+            	<div class="loadbar"></div>
+            </div>
+            <div class="glow"></div>
+        </div>
+    </div>
+	<!-- put this to js code to avoid light background flickering when you hit refresh -->
+	<script>
+	    const theme = localStorage.getItem('theme') || 'light';
+	    document.body.className = theme;
+    </script>
+    <header class="container-full"><!--start of header-->
+		<div class="header container">
+			<div class="headerSection"><!--start of headerSection-->
+				<a href="../index.html"><div class="logo"></div></a>
+				<div class="navigation"><!--start of navigation-->
+					<nav class="nav">							
+						<ul class="nav-list">
+							<li class="center"><a href="../index.html">Home</a></li>
+							<li class="center"><a href="../about.html">About</a></li>
+							<li class="center"><a href="../products.html">Products</a></li>
+							<li class="center"><a href="../news.html">News</a></li>
+							<li class="center"><a href="../contact-us.html">Contact Us</a></li>
+						</ul>
+					</nav>
+
+					<div class="tools"><!--start of tools-->
+	                    <div class="options">
+	                        <span id="searchTop-btn"><i class="fas fa-search"></i></span>
+	                         <span><a href="../account.html"><i class="fa-solid fa-user-large"></i></a></span>
+	                        <span class="cart-nav">
+	                            <div class="cart-number">10</div>
+	                            <a href="../cart.html"><i class="fas fa-shopping-basket"></i></a>
+	                        </span>
+	                        <button type="button" id="nav-mode_switch" class="tooltip">
+	                            <i class="fas fa-sun"></i>
+	                            <i class="fas fa-moon"></i>
+	                        </button>
+	                        <span><i class="fas fa-bars menubar"></i></span>
+	                        <span class="js-menu__open" data-menu="#main-nav"><i class="fa-solid fa-angle-left"></i></span>
+	                    </div>
+	                </div><!--end of tools-->
+
+				
+				</div><!--end of navigation-->
+				
+				
+			</div><!--end of headerSection-->
+		</div>	<!--end of header-->
+		
+		<!--Start of Scroll Top Button-->
+		<button id="scrollTop" class="scrollTop"><i class="fa-solid fa-angles-up"></i></button>
+		<!--End of Scroll Top Button-->
+
+		<!--HIDDEN ELEMENTS [MODAL]-->
+		<!--SEARCH MODAL-->
+		<div id="modalTwo" class="search-modal-wrap">                
+            <div class="search-modal-content">
+                <div class="search-modal-header">
+                    <span class="search-icon-modal">
+                        <i class="fas fa-search"></i> 
+                    </span>
+                    <span class="closeBtn">
+                            &times;
+                    </span>
+                </div>
+                <center><div class="logo"></div></center>
+                
+                <form>
+                    
+                    <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Search here .." { this.value = 'Search here'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+                </form> 
+            </div>
+        </div> 
+        <!--END OF SEARCH MODAL-->
+        <!--END OF HIDDEN ELEMENTS [MODAL]-->
+
+	</header><!--end of header-->
+
+<!-- START OF CONTENT -->
+<div class="product_detail_wrap container">
+	<div class="product_image_sidebar"><!-- start of product_image_sidebar -->
+		<div class="sale-notice">
+			<div class="new-product-display">NEW!</div>
+		</div>
+		<div class="xzoom-container">
+			<div class="sale-notice">
+				<div class="new-product-display">NEW!</div>
+			</div>
+			<center class="gitna">
+				<div class="zoom_container">
+					<!--<div class="img_link">
+						<a href="../img/watch-3.png" class="" xoriginal="../img/watch-3.png"><i class="fa-solid fa-magnifying-glass-plus"></i></a>
+					</div>-->
+					<img src="../img/door-a.png" class="xzoom mainZoom" xoriginal="../img/door-a.png">
+				</div>
+			</center>
+			
+			<div class="xzoom-thumbs"><!-- start of thumbnail area -->
+
+				<div class="thumb-frame">
+					<a href="../img/door-a.png">
+						<img class="xzoom-gallery" src="../img/door-a.png" xpreview="../img/door-a.png">
+					</a>
+				</div>
+				<div class="thumb-frame">
+					<a href="../img/door-b.png">
+						<img class="xzoom-gallery" src="../img/door-b.png" xpreview="../img/door-b.png">
+					</a>
+				</div>	
+				<div class="thumb-frame">
+					<a href="../img/door-a.png">
+						<img class="xzoom-gallery" src="../img/door-a.png" xpreview="../img/door-a.png">
+					</a>
+				</div>	
+				<div class="thumb-frame">
+					<a href="../img/door-b.png">
+						<img class="xzoom-gallery" src="../img/door-b.png" xpreview="../img/door-b.png">
+					</a>
+				</div>	
+				<div class="thumb-frame">
+					<a href="../img/door-a.png">
+						<img class="xzoom-gallery" src="../img/door-a.png" xpreview="../img/door-a.png">
+					</a>
+				</div>	
+				
+			</div><!-- start of thumbnail area -->
+
+		</div>
+	</div><!-- end of product_image_sidebar -->
+
+
+	<div class="product_detail_price"><!-- start of product_detail_price -->
+		<!-- description start -->		
+			<h1 class="product_detail_title">Door Black</h1>
+			<div class="star_ratings">
+				<div class="the_star">
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star checked"></span>
+					<span class="fa fa-star"></span>
+					<span class="fa fa-star"></span>
+				</div>
+				<div class="number_of_review">
+					(2 Reviews)
+				</div>
+			</div>
+			<h1 class="the_price">$157.00 <span>$170.00</span></h1>
+			<div class="detail_paragraph"><p>Integer hendrerit nisi a sem ullamcorper consequat. Nulla eu blandit velit. Maecenas fermentum arcu velit. Fusce lobortis diam in fermentum placerat. Nullam ac mauris luctus, lobortis enim vehicula, lacinia velit. Maecenas sed rhoncus turpis. Etiam imperdiet turpis bibendum, porttitor magna vel, gravida lectus.
+</p>
+			</div>
+			
+			<div class="the_quantity">				
+                <button class="inc button">+</button>
+                <input type="text" name="qty" id="4" value="0" class="num">
+                <button class="dec button">-</button>
+			</div>
+
+			<div>
+				<button class="the_cart">Add to Cart</button>
+			</div>	
+		<!-- description end -->
+	</div><!-- end of product_detail_price -->
+
+</div>
+
+<!-- PRODUCT DESCRIPTION / RELATED PRODUCTS / LOWER ADS-->
+<div class="contents container">
+	<!-- PLACE TAB HERE -->
+	<div class="product_tab">
+		<section class="tab_head">
+			<span class="tab_toggle is-active">Description</span>
+			<span class="tab_toggle">Additional Information</span>
+			<span class="tab_toggle">Reviews (2)</span>
+		</section>
+
+		<section class="tab_body">
+			<section class="description_tab tab_content is-active"><!-- tab 1-->
+				<div class="landingHead">
+					<h2>Description</h2>
+				</div>
+				<div class="detail_paragraph">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum turpis eget diam faucibus dictum. Cras sit amet interdum metus, vitae egestas libero. Curabitur eu ipsum at erat feugiat malesuada vitae non diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pulvinar eget odio vel sagittis. Fusce consectetur condimentum aliquet. Mauris consectetur porta euismod.
+
+					In hendrerit tellus a dolor tincidunt rhoncus. Vivamus viverra blandit nulla, quis accumsan sem gravida non. Integer in magna ligula. Nam vel sapien velit. Vivamus diam elit, auctor id pellentesque ut, euismod et purus. Nam eget facilisis sem. Aenean molestie nisl justo, ac consectetur erat eleifend ut. Donec nec tempor sem, nec fermentum felis. Donec fringilla at mi quis porttitor. Aenean eget egestas tellus, id ullamcorper velit. Curabitur libero sapien, scelerisque eget semper in, tincidunt eu est. Aliquam viverra ante sit amet magna aliquam faucibus. Cras non vulputate diam. Vestibulum fermentum fringilla posuere.</p>
+
+					<p>Maecenas dictum neque in pellentesque imperdiet. Nullam tristique libero et est imperdiet, id lacinia metus ornare. Morbi a diam ornare, gravida turpis et, commodo nisi. Pellentesque ut nisi congue, tincidunt elit non, porta quam. Cras lacus risus, faucibus ullamcorper finibus sit amet, malesuada at augue. Morbi tellus risus, tincidunt quis nisi at, tincidunt vulputate nulla. Pellentesque dapibus nulla sed urna porta, nec dapibus nisi iaculis. Cras commodo ut felis at ultrices. Morbi mollis turpis eu dolor fringilla consequat. Ut ut velit eu tellus porta placerat in ut est. In tincidunt consectetur nulla, vitae faucibus velit ultrices vel.</p>
+
+				</div>
+			</section>
+
+			<section class="additional_info tab_content"><!-- tab 2-->
+				<table>
+				  <tr>
+				    <td>Weight</td>
+				    <td>20kg</td>
+				  </tr>
+				  <tr>
+				    <td>Dimensions</td>
+				    <td>12 × 24 × 35 cm</td>
+				  </tr>
+				  <tr>
+				    <td>Color</td>
+				    <td>Black, Green, Indigo</td>
+				  </tr>
+				  <tr>
+				    <td>Size</td>
+				    <td>Large, Medium, Small</td>
+				  </tr>
+				  
+				</table>
+			</section>
+
+			<section class="review_tab tab_content"><!-- tab 3-->
+				<section class="theReview"> 
+					<h1>2 reviews for Seiko Chromograph 100M</h1>
+					<section class="show_review"> <!-- review #1 -->
+						<div class="review_thumb">
+							<img src="../img/review-img.png">
+						</div>
+						<div class="review_comment">
+							<div class="username_review">
+								<h4>Angela white<span> – April 12, 2018</span></h4>
+								<div class="the_star_reviewTab">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div class="p_review">
+								<p>Duis ac nisi at ex viverra dapibus. Praesent scelerisque venenatis massa pretium convallis. Mauris sed ullamcorper tellus.</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="show_review"><!-- review #2 -->
+						<div class="review_thumb">
+							<img src="../img/id-1.jpg">
+						</div>
+						<div class="review_comment">
+							<div class="username_review">
+								<h4>Sofia lee<span> – April 20, 2022</span></h4>
+								<div class="the_star_reviewTab">
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star checked"></span>
+									<span class="fa fa-star"></span>
+								</div>
+							</div>
+							<div class="p_review">
+								<p>In rhoncus arcu eu arcu imperdiet tristique. Aenean tempus aliquam nunc non tristique. Sed quis consequat est, non interdum ante. Praesent ut purus risus. Curabitur sit amet odio lorem. Fusce blandit in ligula sit amet euismod. Cras sed lorem feugiat, vehicula ante id, dictum enim. Proin molestie diam ac varius ullamcorper. Sed ut nisi magna.
+								</p>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				
+				<!-- Add a review section -->
+				<section class="add_review">
+					<h1>Add a Review</h1>
+					<div class="review_form">
+						<form>
+							<div>
+								<label for="rating">
+									Your rating 
+								<span class="required">*</span>
+								</label>
+							</div>
+
+							<label for="rating" class="to_rate">
+								<span class="fa-regular fa-star"></span>
+								<span class="fa-regular fa-star"></span>
+								<span class="fa-regular fa-star"></span>
+								<span class="fa-regular fa-star"></span>
+								<span class="fa-regular fa-star"></span>
+							</label>						
+							
+
+							<div class="textareaForm">
+								<div>
+									<label for="rating">
+										Your review
+									<span class="required">*</span>
+									</label>
+								</div>
+								<textarea class="form_control" cols="1"></textarea>
+							</div>
+
+							<div class="group_form">
+								<div class="name_form">
+									<label for="rating">
+										Name
+									<span class="required">*</span>
+									<input type="text" class="form_control">
+								</div>
+
+								<div class="email_form">
+									<label for="rating">
+										Email
+									<span class="required">*</span>
+									<input type="text" class="form_control">
+								</div>						
+							</div>
+
+							<div class="submitBtn">
+								<button class="submit-btn">Submit</button>
+							</div>
+
+						</form>
+					</div>
+				</section>
+			</section>
+		</section>
+
+	</div>
+
+<!-- RELATED PRODUCTS -->
+
+	<div class="landingProducts">
+		<div class="landingHead">
+			<h1>Related Products</h1>
+			<a href="#">View All</a>
+		</div>
+
+		<div class="newest_section slider1">
+			<ul class="landing_products swiper-wrapper">
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="new-product-display">NEW!</div>
+					</div>
+					<a href="wood-chair.html">
+						<div class="img_frame">
+							<center><img src="../img/chair-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Wood Chair</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="new-product-display">NEW!</div>
+					</div>
+					<a href="door-black.html">
+						<div class="img_frame">
+							<center><img src="../img/door-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Door Black</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="new-product-display">NEW!</div>
+						<div class="sale">SALE</div>
+					</div>
+					<a href="wrist-watch2.html">
+						<div class="img_frame">
+							<center><img src="../img/watch-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Wrist Watch02</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="new-product-display">NEW!</div>
+						<div class="percent-30">15%</div>
+					</div>
+					<a href="sunk.html">
+						<div class="img_frame">
+							<center><img src="../img/lababo-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Sunk-01</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="sale">SALE</div>
+					</div>
+					<a href="wood-clock.html">
+						<div class="img_frame">
+							<center><img src="../img/clock-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Wood Clock</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<div class="sale-notice">
+						<div class="percent-30">10%</div>
+					</div>
+					<a href="sofa-black.html">
+						<div class="img_frame">
+							<center><img src="../img/sofa-black.png" /></center>
+						</div>
+					</a>
+					
+					<h3 class="product_title">Sofa Black</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<a href="shower.html">
+						<div class="img_frame">
+							<center><img src="../img/shower-1.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Shower-01</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+
+				<li class="landing_products_list swiper-slide">
+					<div class="price_section">
+						<a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+					</div>
+					<a href="headphone-2.html">
+						<div class="img_frame">
+							<center><img src="../img/headphone-2.png" /></center>
+						</div>
+					</a>
+					<h3 class="product_title">Headphone-2</h3>
+					<h3 class="product_price_new">$ 30.00</h3>
+				</li>
+			</ul>
+			</div>	
+	</div>
+<div class="commerce">
+	<img src="../img/adsClock.png" class="commerce1" />
+	<img src="../img/adsTablet.png" class="commerce1-720p" />
+	<img src="../img/adsPhone.png" class="commerce1-480p" />			
+</div>
+</div><!-- END OF PRODUCT DESCRIPTION / RELATED PRODUCTS / LOWER ADS-->
+
+<!-- LOWER ADS -->
+<div class="container">
+	
+</div>
+
+<!-- MINICART -->
+<div class="js-menu__context">
+
+  <div id="main-nav" class="js-menu js-menu--right">
+    <span class="js-menu__close">Close x</span>   
+    
+    <div class="minicart-header">
+        <h1>Your Cart</h1>
+    </div>
+
+    <div class="minicart-items">
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Seiko Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/seiko.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+        <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Watch</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/watch-1.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+         <div class="minicart_row">
+            <div class="minicart-details">
+                <div>
+                    <h5 class="mini_cart_title">
+                        <a href="#">Ultimate Headphone</a>
+                    </h5>
+                </div>
+
+                <div class="minicartPrice">$17.50</div>
+            </div>
+ 
+
+            <span class="remove-x-minicart"><i class="fa-solid fa-xmark"></i></span>
+            <div class="mini-cart-img">
+                <center>
+                    <div class="figure">
+                    
+                        <a href="#">
+                            <img src="../img/headphone-2.png">
+                        </a>
+                        
+                        <a href="#" title="remove product"></a>
+                    </div>
+                </center>
+            </div>                   
+        </div>
+
+    </div><!-- end of minicart-items -->
+
+    <div class="subtotal_mini_cart">
+        <h4>Subtotal:</h4>
+        <h3>$220.00</h3>
+    </div>
+
+    <div class="view_cart_option">
+        <center><a class="viewCart_btn" href="../cart.html">view cart</a></center>
+        <center><a class="checkout_btn" href="../checkout.html">checkout</a></center>
+    </div>
+
+  </div>
+</div>
+<!-- END OF MINICART -->
+
+
+	<footer class="footer container-full"><!--start of footer-->
+		<section class="subscribe-area container">
+			<h1 class="subscribe_header">Subscribe to our news</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae diam porta, dictum odio ut, congue odio. Etiam odio sapien, feugiat sed diam vitae, rhoncus iaculis justo.</p>
+
+			<section class="news-form">
+				<form autocomplete="off">
+                    
+	                <input type="text" name="s" id="s" class=" search-wp btn-block" onfocus="if(this.value==this.defaultValue)this.value=''" onblur="if(this.value=='')this.value=this.defaultValue" value="Enter your email.." { this.value = 'Enter your email'; this.style.color = '#000';} title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>"/>
+	                <button class="subscribe_btn">Subscribe</button>
+	            </form>
+			</section> 
+
+		</section>
+
+		<section class="bottomwrap container-full">
+			<section class="bottom_footer container">
+				<div class="copyright"><p>© 2018</p></div>
+				<div class="social_media">
+					<a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+					<a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+					<a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+				</div>
+			</section>
+		</section>
+
+	</footer><!--end of footer-->
+
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../js/preloader.js"></script>
+	<!-- Link Swiper's JS -->
+    <script type="text/javascript" src="../js/swiper.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+    <!-- End of Link Swiper's JS -->
+	<script type="text/javascript" src="../js/init.js"></script>
+	<script type="text/javascript" src="../js/zoom.js"></script>
+    
+</body>
+</html>

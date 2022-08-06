@@ -1,0 +1,29 @@
+.error_404 {
+	margin-top: 130px;
+	text-align: center;
+
+	.header_404 {
+		font-size: 280px;
+		color: var(--color-nav-main);
+
+		@include tablet {
+			font-size: 200px;
+		}
+
+		@include phone {
+			font-size: 160px;
+		}
+	}
+
+	.you_lost {
+		font-size:26px;
+		color: var(--nav-hover-tab);
+	}
+
+	.return_home {
+		color: var(--color-tools);
+		font-size: 18px;
+		text-decoration: underline;
+	}
+
+}

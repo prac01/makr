@@ -1,0 +1,139 @@
+.about-billboard {
+	background-color: var(--color-primary);
+	position: relative;
+	background-image: url(img/about-bg1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+	margin-top:120px;
+	height: 200px;
+	width: 100%;
+	background-color: #ebebeb;
+	z-index: 1;
+
+	@include tablet {
+		margin-top:72px;
+	}
+	
+	.about-header {
+		height: 200px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		.about-title {
+			z-index: 50;
+			color:#333;
+			font-size: 40px;
+			text-transform: capitalize;
+		}
+	}
+	
+}
+
+.welcome_to {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	margin-top: 80px;
+	font-family: 'Roboto', sans-serif;
+
+	@include tablet-m {
+		grid-template-columns: 1fr;
+	}
+
+
+	.img_frame_about {
+		overflow: hidden;
+		width: 100%;
+
+		@include tablet-m {
+			order: 2;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+	}
+
+	.welcome_message {
+
+
+		h1 {
+			color: var(--h1-newest);
+			margin-bottom: 20px;
+			font-size: 30px;
+		}
+
+		p {
+			font-weight: 300;
+			margin-bottom: 15px;
+			text-align: justify;
+  			text-justify: inter-word;
+		}
+
+	}
+
+}
+
+
+.accordion_list {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 80px;
+	padding: 20px;
+
+	h1 {
+		color: var(--h1-newest);
+		margin-bottom: 20px;
+		font-size: 23px;
+
+	}
+
+	.accordion_item {
+		border-bottom: 1px solid var(--products-border);
+		padding: 20px 0;
+
+		.item_header {
+			padding: 14px 6px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			cursor: pointer;
+		}
+
+		h1 {
+			font-size: 20px;
+		}
+
+		.icon {
+			width: 28px;
+			height: 28px;
+			border: 2px solid var(--color-tools);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--color-tools);
+
+		}
+
+		.text {
+			font-weight: 300;
+			padding: 0 6px;
+			max-height: 0;
+			overflow: hidden;
+
+			p {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.accordion_item.active .text {
+		max-height: 600px;
+		transition: .4s linear;
+	} 
+
+}

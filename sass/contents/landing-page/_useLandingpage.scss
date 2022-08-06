@@ -1,0 +1,14 @@
+.products {
+	padding: 10px 15px;
+	background: #ccc;
+	.product-list {
+
+		item {
+			height: 300px;
+			width: 200px;
+			background-color: #ccc;
+			margin-right: 10px;
+			color: var(--color-preloader);
+		}
+	}
+}

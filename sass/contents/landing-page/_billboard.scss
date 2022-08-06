@@ -1,0 +1,310 @@
+
+.contents {
+	padding-top: 118px;
+	
+	/* BILLBOARD AREA */
+	.billboard-area {
+		margin-bottom: 30px;
+		/* UPPER BILLBOARD */
+		.billboard-grid-01 {
+			display: grid;
+			grid-template-columns: 64% 36%;
+			grid-column-gap: 2px;
+			grid-row-gap: 2px;
+			margin-bottom:2px;
+
+			@include phone {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include phone-sm {
+				grid-template-columns: 1fr;
+			}
+
+			.billboard-item:hover:first-child .imgFrame img{
+				right:-150px;
+			}
+			.billboard-item:hover:last-child .imgFrame img{
+				right:-110px;
+			}
+
+			.billboard-item {
+				background-color: var(--color-billboard);
+				overflow: hidden;
+
+				&:hover {
+					background-color: var(--color-billboard-hov);
+				}
+
+				.detailed {
+					padding:15px 23px;
+					
+					h2 {
+						font-size: 20px;
+						font-weight: 400;
+						color: var(--h2-billboard);
+						}
+
+					a {
+						color: #999;
+						padding-bottom:0px;
+						border-bottom: 1px solid #999;
+						&:hover {
+							color: #666;
+						}
+					}
+				}
+
+				.imgFrame {
+					position: relative;
+					img {
+						transition: all 0.5s;
+					}								
+				}
+
+				/* CHILD ELEMENTS */
+				&:first-child {
+					.imgFrame {
+						position: relative;
+						width: 642px;
+						height:410px;
+
+						img {
+							position: absolute;
+							width: 100%;
+							top: -20px;
+							right:-113px;
+							
+						}
+
+						@include tablet-lg {
+							width: 500px;
+							height:300px;
+							right:-60px;
+							bottom: 15px;
+						}
+
+						@include tablet {
+							width: 420px;
+							height:180px;
+						}
+						@include phone {
+							width: 330px;
+							height:110px;
+							right:20px;
+						}
+						@include phone-sm {
+							right:15px;
+							width: 240px;
+							height:70px;
+						}
+									
+					}
+				}
+
+				&:nth-child(2) {
+					.imgFrame {
+						position: relative;
+						width: 352px;
+						height:363px;
+
+						img {
+							position: absolute;						
+							bottom: -48px;
+							right:-72px;
+							width: 100%;
+						}
+
+						@include tablet-lg {
+							width: 290px;
+							height:230px;
+							bottom: -23px;
+						}
+
+						@include tablet {
+							width: 252px;
+							height:180px;
+						}
+
+						@include phone {
+							width: 182px;
+							height:110px;
+							right:0px;
+						}
+						@include phone-sm {
+							right: -80px;
+							width: 170px;
+							height:70px;
+						}
+									
+					}
+				}
+				/* END OF CHILD ELEMENTS */
+			}
+		}
+
+		/* LOWER BILLBOARD */
+		.billboard-grid-Two {
+			display: grid;
+			grid-template-columns: 36% 64%;
+			grid-column-gap: 2px;
+			grid-row-gap: 2px;
+			margin-bottom:2px;
+
+			@include phone {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include phone-sm {
+				grid-template-columns: 1fr;
+			}
+
+			.billboard-item:hover:first-child .imgFrame img{
+				right:-100px;
+				top: -10px;
+			}
+			.billboard-item:hover:last-child .imgFrame img{
+				right:-110px;
+			}
+
+
+
+			.billboard-item {
+				background-color: var(--color-billboard);
+				overflow: hidden;
+
+				&:hover {
+					background-color: var(--color-billboard-hov);
+				}
+
+				.detailed {
+					padding:15px 23px;
+					
+					h2 {
+						font-size: 20px;
+						font-weight: 400;
+						color: var(--h2-billboard);
+						}
+
+					a {
+						color: #999;
+						padding-bottom:0px;
+						border-bottom: 1px solid #999;
+						&:hover {
+							color: #666;
+						}
+					}
+				}
+
+				.imgFrame {
+					position: relative;
+					img {
+						transition: all 0.5s;
+					}
+								
+				}
+
+				/* CHILD ELEMENTS */
+				&:first-child {
+					.imgFrame {
+						position: relative;
+						width: 356px;
+						height:287px;
+
+						img {
+							position: absolute;
+							width: 100%;
+							top: 0px;
+							right:-63px;
+							
+						}
+
+						@include tablet-lg {
+							width: 290px;
+							height:300px;
+							right:-23px;
+						}
+
+						@include tablet {
+							width: 230px;
+							height:170px;
+						}
+						@include phone {
+							width: 190px;
+							height:110px;
+							right:-36px;
+
+						}
+						@include phone-sm {
+							right:-75px;
+							width: 200px;
+							height:60px;
+							top:-10px;
+						}
+									
+					}
+				}
+
+				&:nth-child(2) {
+					.imgFrame {
+						position: relative;
+						width: 593px;
+						height:405px;
+
+						img {
+							position: absolute;						
+							bottom: 0px;
+							right:-90px;
+							width: 100%;
+						}
+
+						@include tablet-lg {
+							width: 400px;
+							height:310px;
+							right:0px;
+							bottom: 10px;
+						}
+
+						@include tablet {
+							width: 260px;
+							height:190px;
+							right: -30px;
+						}
+
+						@include phone {
+							width: 182px;
+							height:110px;
+							right:0px;
+						}
+						@include phone-sm {
+							right: -80px;
+							width: 170px;
+							height:70px;
+						}
+									
+					}
+				}
+				/* END OF CHILD ELEMENTS */
+			}
+
+			
+
+		}
+	}
+
+	
+	
+	.newestProducts {
+
+	}
+
+	.bestSeller {
+
+	}
+
+	.news-and-events-landingPage {
+
+	}
+}
+
+

@@ -1,0 +1,96 @@
+/*SEARCH MODAL AREA*/
+
+.search-modal-wrap {
+	display: none;
+	position:fixed; 
+	z-index: 999; 
+	left:0; 
+	top:0; 
+	height:100%; 
+	width: 100%; 
+	overflow: auto; 
+	background-color: var(--color-modalbg);
+
+	.search-modal-content {
+        z-index: 9999; 
+        background-color: var(--color-modalbg);
+        margin:14% auto; 
+        /*padding:20px 20px 40px 20px;*/ 
+        width:90%; 
+        height:300px;
+        
+-webkit-box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.5);
+box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.5);
+
+        animation-name: modalopen1; 
+        animation-duration:1s;  
+        position:relative;
+        .search-modal-header {
+            height:40px;
+            width:100%;
+            padding:5px 10px;
+            color:var(--color-primary-letter);
+            background-color: var(--color-modal-header);
+
+
+            .search-icon-modal {
+                font-size: 23px;
+                color:var(--color-primary);
+            }
+            .closeBtn { color:#fff; position: absolute; top:-2px; right:10px; font-size: 34px; font-weight:700; transition: all 0.2s ease; display: block; color:var(--color-primary);}
+            .closeBtn:hover,.closeBtn:focus { color:color(primary); text-decoration: none; cursor:pointer; transform: rotate(90deg); }
+
+        }
+
+        img {
+            max-width:200px; 
+            margin-top:30px;
+            margin-bottom:20px;
+        }
+
+        @keyframes modalopen{
+            from{opacity:0}
+            to{opacity:1}
+        }
+        @keyframes modalopen1{
+            from{
+                opacity:0;
+                transform:translateY(-80px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0px);
+            }
+        }
+        form {
+            padding-top:40px;
+            width:90%;
+            margin:0 auto;
+            
+            input {
+                width:100%;
+                padding:10px 15px;
+                font-family: 'Source Sans Pro', sans-serif !important;
+                font-size:18px;
+                color:var(--color-input-letter);
+                border:none;
+                border-bottom:1px solid var(--color-input-modal);
+                background-color:transparent;
+                outline:none;
+                text-align: center;
+                
+            }
+        }
+    }
+    .logo {
+    	margin-top: 50px;
+		background-image: var(--image-logo); 
+		height: 27px;
+		width: 40px;
+	}
+}
+
+/*END OF SEARCH MODAL AREA*/
+
+

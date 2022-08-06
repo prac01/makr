@@ -1,0 +1,158 @@
+.checkout_wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: 5px;
+	padding-top: 60px;
+
+	@include tablet-m {
+		display: block;
+		gap: 0;
+	}
+
+	.billing-details { /* left */
+
+		width: 100%;
+		padding: 15px;
+
+		.checkout-steps {
+
+			form {
+				.name-group {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					gap:20px;
+
+					div	{
+						width: 100%;
+
+						input {
+							
+						}
+					}
+				}
+
+			}
+		}
+
+
+	}/* end of billing details */
+
+	.your-order { /* right */
+		border: 2px solid var(--products-border);
+		max-width: 480px;
+		width: 100%;
+		margin-top: 90px;
+		height: 100%;
+
+		@include tablet {
+			max-width: 750px;
+			border: none;
+			margin-top: 50px;
+			border-top: 2px solid var(--products-border);
+
+		}
+
+		.your_order_summary {
+			padding: 20px 15px 35px 15px;
+
+
+			table.table-mini-cart {
+				border-collapse: collapse;
+				width: 100%;
+
+
+				thead {
+					border-bottom: 1px solid var(--products-border);
+
+					tr {
+						th {
+							padding: 10px;
+						}
+					}
+				}
+
+				tbody {
+					tr {
+						td {
+							padding: 10px;
+						}
+					}
+				}
+
+				tfoot {
+					tr {
+						td {
+							padding: 10px;
+						}
+					}
+				}
+
+			}
+		}
+
+
+	}/* end of your order */
+
+
+} /* end of checkout_wrapper */
+
+
+
+
+
+
+
+
+/* separate class */
+.login-code {
+	color: var(--color-percentage);
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.coupon-login {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5px;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+.cart-title {
+	font-size: 26px;
+	text-transform: capitalize;
+	margin: 20px 0;
+}
+
+.border-top {
+	border-top: 1px solid var(--products-border);
+	padding-top:30px;
+	margin-top:20px;
+}
+.border-bottom {
+	border-bottom: 1px solid var(--products-border);
+}
+
+.total_bill_group {
+	
+	margin-top: 10px;
+}
+.total-label {
+	font-size: 18px;
+	font-family: 'Roboto', sans-serif;
+}
+.total_price {
+	font-size: 26px;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+
+
